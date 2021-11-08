@@ -21,11 +21,12 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - tskit
+    - python >=3.7
+    - tskit >=0.3.3
+    - numcodecs >=0.6.4
     - zarr
     - humanize
 
@@ -42,10 +43,8 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Gzip-like compression utility for tskit tree sequences.
-
-  # The remaining entries in this section are optional, but recommended
   description: |
-    Tszip provides high-levels of compression for tskit tree sequence 
+    Tszip provides high-levels of compression for tskit tree sequence
     files, via a simple Python API and gzip-like command line interface.
   doc_url: http://tszip.readthedocs.io/
   dev_url: https://github.com/tskit-dev/tszip
@@ -53,3 +52,4 @@ about:
 extra:
   recipe-maintainers:
     - jeromekelleher
+    - benjeffery

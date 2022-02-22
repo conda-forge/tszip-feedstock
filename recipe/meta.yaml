@@ -1,5 +1,5 @@
 {% set name = "tszip" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: be40662cfdab014f931bb02b9ffde792449e26007b48c65070d954a1f988c32f
+  sha256: 15bc1d5229b41217841075a231717b0b8f8535f986fae25bb27b07c5a463bc11
 
 build:
   number: 0

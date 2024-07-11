@@ -1,5 +1,5 @@
 {% set name = "tszip" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8a2b1ab1fb5c8a72d3a65f0a90cbaa157695f2d67ad30d1e4a7bf42e645c22cf
+  sha256: 292e16a02086e10771847b7041fa30cd8c11b6f6cf5f841da745085afb1e3d06
 
 build:
   number: 0
@@ -21,13 +21,13 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python >=3.7
+    - python >=3.9
     - pip
   run:
-    - python >=3.7
+    - python >=3.9
     - tskit >=0.3.3
     - numcodecs >=0.6.4
-    - zarr
+    - zarr <3
     - humanize
 
 test:
@@ -46,7 +46,7 @@ about:
   description: |
     Tszip provides high-levels of compression for tskit tree sequence
     files, via a simple Python API and gzip-like command line interface.
-  doc_url: http://tszip.readthedocs.io/
+  doc_url: https://tskit.dev/tszip/docs
   dev_url: https://github.com/tskit-dev/tszip
 
 extra:

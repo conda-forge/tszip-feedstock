@@ -21,13 +21,13 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python >=3.7
+    - python >=3.9
     - pip
   run:
-    - python >=3.7
+    - python >=3.9
     - tskit >=0.3.3
     - numcodecs >=0.6.4
-    - zarr
+    - zarr <3
     - humanize
 
 test:
@@ -46,7 +46,7 @@ about:
   description: |
     Tszip provides high-levels of compression for tskit tree sequence
     files, via a simple Python API and gzip-like command line interface.
-  doc_url: http://tszip.readthedocs.io/
+  doc_url: https://tskit.dev/tszip/docs
   dev_url: https://github.com/tskit-dev/tszip
 
 extra:

@@ -11,7 +11,7 @@ Summary: Gzip-like compression utility for tskit tree sequences.
 
 Development: https://github.com/tskit-dev/tszip
 
-Documentation: http://tszip.readthedocs.io/
+Documentation: https://tskit.dev/tszip/docs
 
 Tszip provides high-levels of compression for tskit tree sequence
 files, via a simple Python API and gzip-like command line interface.

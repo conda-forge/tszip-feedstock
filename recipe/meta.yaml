@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 78e9d2deebe1277dfef4d20e34c13e91ffd22759f657b0322c2b2ecda0800e2d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tszip=tszip.cli:tszip_main
@@ -21,16 +21,18 @@ requirements:
   host:
     - setuptools
     - setuptools_scm
-    - python >=3.9
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - tskit >=0.3.3
     - numcodecs >=0.6.4
     - zarr <3
     - humanize
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - tszip -h
     - tsunzip -h

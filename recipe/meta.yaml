@@ -27,7 +27,7 @@ requirements:
     - python >={{ python_min }}
     - tskit >=0.3.3
     - numcodecs >=0.6.4
-    - zarr <3
+    - zarr >=2.17
     - humanize
 
 test:
@@ -55,3 +55,4 @@ extra:
   recipe-maintainers:
     - jeromekelleher
     - benjeffery
+    - petrelharp

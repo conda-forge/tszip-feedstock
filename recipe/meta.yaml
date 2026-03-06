@@ -1,5 +1,7 @@
 {% set name = "tszip" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
+{% set python_min = "3.11" %}
+
 
 package:
   name: {{ name|lower }}
@@ -7,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 007d25e1dfb617e90e9ae94a34b26327ea7902881617069efe76f609d2b3654e
+  sha256: 13b847b24a7ac4ce32eac84dcbddbad66cf4ffef83f66a7fa72882383e9e76d8
 
 build:
   number: 0
